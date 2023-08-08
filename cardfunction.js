@@ -1,5 +1,6 @@
 const valorProduto = 35.9;
 const totalProduto = document.getElementById("total");
+const totalDesconto = document.getElementById("desconto");
 let quant = 0;
 
 const menos = document.getElementById("menos");
@@ -36,5 +37,13 @@ function quantItens() {
 
 function calcularTotal() {
   const valorTotal = (quant * valorProduto).toFixed(2);
+  let valorDesc;
+
+  if (quant >= 6) {
+    valorDesc = valorTotal - (10 / 100) * valorTotal;
+    totalDesconto.innerHTML = `Valor total com desconto: ${valorDesc.toFixed(2)}`;
+  } else if (quant < 6) {
+    totalDesconto.innerHTML = "";
+  }
   totalProduto.innerHTML = `Valor total: ${valorTotal}`;
 }
