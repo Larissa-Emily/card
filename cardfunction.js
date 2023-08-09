@@ -7,6 +7,10 @@ const menos = document.getElementById("menos");
 const mais = document.getElementById("mais");
 const quantidadeItens = document.getElementById("quantidade");
 
+const fazerPedido = document.getElementById("fazerPedido");
+const voltar = document.getElementById("voltar");
+const modalPagamento = document.getElementById("modal");
+
 menos.addEventListener("click", function () {
   let num = 1;
   quant = quant - num;
@@ -41,9 +45,19 @@ function calcularTotal() {
 
   if (quant >= 6) {
     valorDesc = valorTotal - (10 / 100) * valorTotal;
-    totalDesconto.innerHTML = `Valor total com desconto: ${valorDesc.toFixed(2)}`;
+    totalDesconto.innerHTML = `Valor total com desconto: ${valorDesc.toFixed(
+      2
+    )}`;
   } else if (quant < 6) {
     totalDesconto.innerHTML = "";
   }
   totalProduto.innerHTML = `Valor total: ${valorTotal}`;
 }
+
+fazerPedido.addEventListener("click", function () {
+  modalPagamento.style.display = "block";
+});
+
+voltar.addEventListener("click", function () {
+  modalPagamento.style.display = "none";
+});
