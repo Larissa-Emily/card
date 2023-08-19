@@ -28,31 +28,35 @@
     </div>
     <section id="modal">
       <h2>Pagamento</h2>
-      <div class="informacao">
-        <form>
-          <label>Nome:</label>
-          <input type="text" />
+      <div class="container">
+        <div class="informacao">
+          <form>
+            <label>Nome:</label>
+            <input type="text" id="nome" />
 
-          <label>Sobrenome:</label>
-          <input type="text" />
+            <label>Sobrenome:</label>
+            <input type="text" id="sobrenome" />
 
-          <label>Endereço:</label>
-          <input type="text" />
+            <label>Endereço:</label>
+            <input type="text" id="endereco" />
 
-          <label>Numero:</label>
-          <input type="text" />
+            <label>Numero:</label>
+            <input type="text" id="numCasa" />
 
-          <label for="pagament-select">Forma de pagamento: </label>
-          <select id="pagament-select">
-            <option value="dinheiro">Dinheiro</option>
-            <option value="dinheiro">Pix</option>
-            <option value="dinheiro">Cartão Debito</option>
-            <option value="dinheiro">Cartão Crédito</option>
-          </select>
-        </form>
+            <label for="pagament-select">Forma de pagamento: </label>
+            <select id="pagament-select">
+              <option value="dinheiro">Dinheiro</option>
+              <option value="dinheiro">Pix</option>
+              <option value="dinheiro">Cartão Debito</option>
+              <option value="dinheiro">Cartão Crédito</option>
+            </select>
+          </form>
+        </div>
+        <div id="resultadoPedido"></div>
       </div>
+
       <button id="voltar">Voltar</button>
-      <button id="concluir">Concluir</button>
+      <button id="concluir" class="concluirPedido">Concluir</button>
     </section>
   </body>
 </html>

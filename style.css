@@ -47,16 +47,25 @@ img {
 
 .card-container button,
 #modal button {
-  padding: 8px;
+  padding: 10px;
   margin: 10px;
   background: #53afde;
 }
 
 .card-container button:hover,
-#modal button:hover {
+#modal button:hover,
+#modal .concluirPedido:hover {
   background: #0834ad;
   cursor: pointer;
   color: #fff;
+}
+
+#modal .concluirPedido {
+  width: 100%;
+  margin: 0;
+  padding: 15px;
+  display: block;
+  background: #53afde;
 }
 
 .card-container p {
@@ -77,13 +86,19 @@ img {
 
 #modal {
   display: none;
-  width: 80%;
+  width: 50%;
   position: absolute;
   z-index: 999;
-  top: 20%;
+  transform: translate(50%, -100%);
   background-color: #fff;
 }
-#modal h2{
+
+#modal .container{
+  display: flex;
+  margin-top:50px 10px;
+}
+
+#modal h2 {
   text-transform: uppercase;
   background-color: #53afde;
   text-align: center;
@@ -91,20 +106,34 @@ img {
   color: #fff;
 }
 
-
-#modal form{
+#modal form {
   padding: 80px;
   line-height: 40px;
-
 }
 
 #modal form input {
   display: block;
-  border-bottom: 1px solid #000;
-  padding: 5px;
+  border: 1px solid #0000003d;
+  padding: 10px;
   width: 300px;
 }
 
-#modal form select{
+#modal form select {
   padding: 5px;
+}
+
+@media (max-width: 890px) {
+  #modal {
+    width: 95%;
+    margin: 10px;
+    transform: none;
+    top: 15%;
+  }
+}
+
+@media (max-width: 1390px){
+  #modal .container{
+    display: block;
+  }
+
 }
